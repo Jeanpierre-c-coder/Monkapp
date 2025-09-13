@@ -1,0 +1,73 @@
+{
+  "monitor": {
+    "max_points": 3000,
+    "update_interval": 0.5
+  },
+  "training": {
+    "episodes": 1000,
+    "max_steps_per_episode": 168,
+    "save_frequency": 25,
+    "eval_frequency": 10,
+    "eval_episodes": 5,
+    "early_stopping": true,
+    "adaptive_lr": true
+  },
+  "agent": {
+    "learning_rate": 0.002,
+    "batch_size": 64,
+    "gamma": 0.99,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay": 20000,
+    "memory_size": 50000,
+    "sequence_length": 16,
+    "hidden_size": 128,
+    "dropout": 0.1
+  },
+  "preheating": {
+    "departure_hour": 9.0,
+    "return_hour": 17.0,
+    "advance_hours": 1.0,
+    "comfort_temp": 21.0,
+    "away_temp": 18.0,
+    "adaptive": true
+  },
+  "optimization": {
+    "target_efficiency": 0.85,
+    "energy_weight": 0.3,
+    "comfort_weight": 0.4,
+    "preheating_weight": 0.3
+  },
+  "pid": {
+    "kp": 2.0,
+    "ki": 0.1,
+    "kd": 0.5,
+    "i_clamp": 10.0
+  },
+  "weather": {
+    "lat": 48.8566,
+    "lon": 2.3522,
+    "alt": 35,
+    "tz": "Europe/Paris",
+    "refresh_min": 5
+  },
+  "building": {
+    "orientation_deg": 180.0,
+    "window_area_m2": 12.0,
+    "solar_gain_coeff": 0.6,
+    "season": "auto"
+  },
+  "cameras": {
+    "cam1": "",
+    "cam2": "",
+    "cam3": "",
+    "fallbacks": [
+      "/mnt/data/preview.webp",
+      "/mnt/data/dpreview.webp",
+      "/mnt/data/spreview.webp"
+    ]
+  },
+  "scenes": {
+    "current": "Home"
+  }
+}
